@@ -14,6 +14,11 @@ import java.util.TimeZone;
  */
 public class DateUtils {
 
+    private static final SimpleDateFormat sdf;
+
+    static {
+        sdf = new SimpleDateFormat("", Locale.getDefault());
+    }
     /**
      * 获取当前时间的起点小时
      * @param currentTime
@@ -32,7 +37,7 @@ public class DateUtils {
     }
 
     public static String format(String pattern,long millis){
-        SimpleDateFormat sdf = new SimpleDateFormat(pattern, Locale.getDefault());
+        sdf.applyPattern(pattern);
         if(millis < 8 * 60 * 60 * 1000){
             sdf.setTimeZone(TimeZone.getTimeZone("GMT+0"));
         }else {
@@ -42,7 +47,7 @@ public class DateUtils {
     }
 
     public static String format(String pattern,Date date){
-        SimpleDateFormat sdf = new SimpleDateFormat(pattern, Locale.getDefault());
+        sdf.applyPattern(pattern);
         sdf.setTimeZone(TimeZone.getTimeZone("GMT+08:00"));
         return sdf.format(date);
     }
