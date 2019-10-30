@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RulerView">
+        <attr name="drawDownLine" format="boolean" />
+        <attr name="drawUpLine" format="boolean" />
+        <attr name="drawUpRuler" format="boolean" />
+        <attr name="drawDownRuler" format="boolean" />
+        <attr name="largeRulerColor" format="color" />
+        <attr name="rulerHeightBig" format="dimension" />
+        <attr name="rulerHeightSamll" format="dimension" />
+        <attr name="rulerWidthBig" format="dimension" />
+        <attr name="rulerWidthSamll" format="dimension" />
+        <attr name="smallRulerColor" format="color" />
+        <attr name="textColor" format="color" />
+        <attr name="textMarginBottom" format="dimension" />
+        <attr name="textSize" format="dimension" />
+        <attr name="upAndDownLineColor" format="color" />
+        <attr name="upAndDownLineWidth" format="dimension" />
+        <attr name="centerLineColor" format="color" />
+        <attr name="centerLineWidth" format="dimension" />
+        <attr name="rulerSpacing" format="dimension" />
+    </declare-styleable>
+</resources>
